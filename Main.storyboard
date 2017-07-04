@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="p35-SP-3Ig">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Storage-->
+        <scene sceneID="Z7B-ui-zG9">
+            <objects>
+                <viewController id="p35-SP-3Ig" customClass="StorageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AOJ-Pt-XLq"/>
+                        <viewControllerLayoutGuide type="bottom" id="50O-0M-ctr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jia-Aa-ajA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zpa-j1-UqD">
+                                <rect key="frame" x="131" y="97" width="112" height="30"/>
+                                <state key="normal" title="Save to Defaults"/>
+                                <connections>
+                                    <action selector="defaults:" destination="p35-SP-3Ig" eventType="touchUpInside" id="MzU-A5-WCz"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Data..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b6t-AE-sRU">
+                                <rect key="frame" x="66" y="50" width="244" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="244" id="4q1-Bb-dJw"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eMa-yq-fMZ">
+                                <rect key="frame" x="128.5" y="135" width="117" height="30"/>
+                                <state key="normal" title="Save to Keychain"/>
+                                <connections>
+                                    <action selector="keychain:" destination="p35-SP-3Ig" eventType="touchUpInside" id="Y0Z-JO-PEg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uBB-1n-Iw3">
+                                <rect key="frame" x="127" y="173" width="120" height="30"/>
+                                <state key="normal" title="Save to CoreData"/>
+                                <connections>
+                                    <action selector="coreData:" destination="p35-SP-3Ig" eventType="touchUpInside" id="TCU-Yd-h21"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="b6t-AE-sRU" firstAttribute="centerX" secondItem="jia-Aa-ajA" secondAttribute="centerX" id="027-Pk-297"/>
+                            <constraint firstItem="uBB-1n-Iw3" firstAttribute="centerX" secondItem="eMa-yq-fMZ" secondAttribute="centerX" id="1RU-4T-XUu"/>
+                            <constraint firstItem="Zpa-j1-UqD" firstAttribute="top" secondItem="b6t-AE-sRU" secondAttribute="bottom" constant="17" id="3Wh-jx-Iqo"/>
+                            <constraint firstItem="Zpa-j1-UqD" firstAttribute="centerX" secondItem="jia-Aa-ajA" secondAttribute="centerX" id="7P1-JW-k5U"/>
+                            <constraint firstItem="eMa-yq-fMZ" firstAttribute="centerX" secondItem="jia-Aa-ajA" secondAttribute="centerX" id="7kS-u0-gkH"/>
+                            <constraint firstItem="uBB-1n-Iw3" firstAttribute="top" secondItem="eMa-yq-fMZ" secondAttribute="bottom" constant="8" id="am5-LL-GaB"/>
+                            <constraint firstItem="b6t-AE-sRU" firstAttribute="top" secondItem="AOJ-Pt-XLq" secondAttribute="bottom" constant="30" id="jE8-bw-NTg"/>
+                            <constraint firstItem="eMa-yq-fMZ" firstAttribute="top" secondItem="Zpa-j1-UqD" secondAttribute="bottom" constant="8" id="zWK-ym-22V"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Storage" id="hpB-3d-I0b"/>
+                    <connections>
+                        <outlet property="textField" destination="b6t-AE-sRU" id="Wgo-Ql-ipz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6wq-p1-P9G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="882" y="626"/>
+        </scene>
+    </scenes>
+</document>

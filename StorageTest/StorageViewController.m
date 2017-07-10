@@ -27,7 +27,6 @@
     return context;
 }
 
-
 - (IBAction)defaults:(id)sender {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setValue:_textField.text forKey:@"SecurityProjDefaultsKey"];
@@ -46,6 +45,17 @@
     if (![context save:&error]) {
         NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
     }
+}
+
+- (IBAction)archive:(id)sender {
+    NSDictionary *dict = [NSDictionary dictionaryWithObject: _textField.text forKey: @"MyKey"];
+    NSString *path = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"archivedData.data"].path;
+    [NSKeyedArchiver archiveRootObject:dict toFile:path];
+}
+
+- (NSURL *)applicationDocumentsDirectory
+{
+    return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
 
 @end

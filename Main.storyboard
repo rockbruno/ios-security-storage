@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="p35-SP-3Ig">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="p35-SP-3Ig">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -51,6 +51,14 @@
                                     <action selector="coreData:" destination="p35-SP-3Ig" eventType="touchUpInside" id="TCU-Yd-h21"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bjZ-lN-hUB">
+                                <rect key="frame" x="127" y="209" width="120" height="30"/>
+                                <state key="normal" title="Save to Archive"/>
+                                <connections>
+                                    <action selector="archive:" destination="p35-SP-3Ig" eventType="touchUpInside" id="az2-d7-jGf"/>
+                                    <action selector="coreData:" destination="p35-SP-3Ig" eventType="touchUpInside" id="cZt-D2-iAA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -59,8 +67,11 @@
                             <constraint firstItem="Zpa-j1-UqD" firstAttribute="top" secondItem="b6t-AE-sRU" secondAttribute="bottom" constant="17" id="3Wh-jx-Iqo"/>
                             <constraint firstItem="Zpa-j1-UqD" firstAttribute="centerX" secondItem="jia-Aa-ajA" secondAttribute="centerX" id="7P1-JW-k5U"/>
                             <constraint firstItem="eMa-yq-fMZ" firstAttribute="centerX" secondItem="jia-Aa-ajA" secondAttribute="centerX" id="7kS-u0-gkH"/>
+                            <constraint firstItem="bjZ-lN-hUB" firstAttribute="width" secondItem="uBB-1n-Iw3" secondAttribute="width" id="CHD-ne-v0r"/>
+                            <constraint firstItem="bjZ-lN-hUB" firstAttribute="top" secondItem="uBB-1n-Iw3" secondAttribute="bottom" constant="6" id="LhO-0h-Bf3"/>
                             <constraint firstItem="uBB-1n-Iw3" firstAttribute="top" secondItem="eMa-yq-fMZ" secondAttribute="bottom" constant="8" id="am5-LL-GaB"/>
                             <constraint firstItem="b6t-AE-sRU" firstAttribute="top" secondItem="AOJ-Pt-XLq" secondAttribute="bottom" constant="30" id="jE8-bw-NTg"/>
+                            <constraint firstItem="bjZ-lN-hUB" firstAttribute="centerX" secondItem="uBB-1n-Iw3" secondAttribute="centerX" id="tb0-NF-jEp"/>
                             <constraint firstItem="eMa-yq-fMZ" firstAttribute="top" secondItem="Zpa-j1-UqD" secondAttribute="bottom" constant="8" id="zWK-ym-22V"/>
                         </constraints>
                     </view>
@@ -74,4 +85,9 @@
             <point key="canvasLocation" x="882" y="626"/>
         </scene>
     </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
+    </simulatedMetricsContainer>
 </document>
